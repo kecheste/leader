@@ -33,6 +33,7 @@ const LeadForm = ({ onSuccess }: { onSuccess: () => void }) => {
       setFormData({ name: "", email: "", status: "New" });
       onSuccess();
     } catch (e) {
+      console.log((e as any).message);
       toast.error("Error adding lead, please try again.");
     } finally {
       setLoading(false);
