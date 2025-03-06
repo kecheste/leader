@@ -1,8 +1,11 @@
-"use client";
-
 import { Check, Mail, Phone, Plus } from "lucide-react";
 import { Lead } from "../types/Lead";
 import { cn } from "../utils/cn";
+import {
+  STATUS_ORDER,
+  STATUS_COLORS,
+  STATUS_LIGHT_COLORS,
+} from "../utils/constants";
 
 interface LeadCardProps {
   lead: Lead;
@@ -13,14 +16,12 @@ export default function LeadCard({ lead }: LeadCardProps) {
   const currentStatusColor = STATUS_COLORS[lead.status];
   const currentLightColor = STATUS_LIGHT_COLORS[lead.status];
 
-  const currentTextColor = currentStatusColor.replace("bg-", "text-");
-
   return (
-    <div className="bg-white text-black p-6 rounded-lg shadow-lg">
+    <div className="bg-white text-black p-2 md:p-6 rounded-lg shadow-lg">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <div className="w-14 h-14 bg-gray-300 rounded-full flex items-center justify-center">
-            <span className="text-lg font-semibold text-gray-600">
+            <span className="text-sm md:text-lg font-semibold text-gray-600">
               {lead.name[0]}
             </span>
           </div>
@@ -51,7 +52,7 @@ export default function LeadCard({ lead }: LeadCardProps) {
                 index === currentStatusIndex
                   ? `${currentStatusColor} text-white`
                   : index < currentStatusIndex
-                  ? `${currentLightColor} ${currentTextColor}`
+                  ? `${currentLightColor}`
                   : "bg-gray-200 text-gray-600"
               )}
             >

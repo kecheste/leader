@@ -1,14 +1,20 @@
-import { FaBell, FaUserCircle } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
 
-const Navbar = () => {
+interface NavbarProps {
+  setShowForm: (show: boolean) => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ setShowForm }) => {
   return (
     <header className="bg-white shadow-md p-4 flex justify-between items-center">
       <h1 className="text-lg font-bold text-gray-700">Manage Leads</h1>
-
-      <div className="flex items-center space-x-4">
-        <FaBell className="text-gray-500 text-xl cursor-pointer hover:text-blue-600" />
-        <FaUserCircle className="text-gray-500 text-2xl cursor-pointer hover:text-blue-600" />
-      </div>
+      <button
+        className="bg-orange-600 text-white p-2 rounded-md flex items-center gap-2 cursor-pointer hover:bg-orange-700 transition"
+        onClick={() => setShowForm(true)}
+      >
+        <FaPlus className="text-white text-lg" />
+        <p>Add Lead</p>
+      </button>
     </header>
   );
 };

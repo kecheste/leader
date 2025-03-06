@@ -4,4 +4,22 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+:-webkit-scrollbar-thumb {
+  background: #8d8d8d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #454545;
 }
