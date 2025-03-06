@@ -12,7 +12,8 @@ connectDB();
 app.use(express.json());
 app.use(
   cors({
-    origin: process.env.NEXT_PUBLIC_FRONT_URI,
+    origin:
+      process.env.NEXT_PUBLIC_FRONT_URI || "https://leader-red.vercel.app",
     // origin: "http://localhost:3000", // Frontend public URI for local development
   })
 );
