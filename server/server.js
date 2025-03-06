@@ -12,7 +12,8 @@ connectDB();
 app.use(express.json());
 app.use(
   cors({
-    origin: "*", // But will be changed to the Next.js frontend later
+    origin: process.env.NEXT_PUBLIC_FRONT_URI,
+    // origin: "http://localhost:3000", // Frontend public URI for local development
   })
 );
 
