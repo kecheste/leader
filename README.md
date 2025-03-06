@@ -1,8 +1,8 @@
+![Homepage](./screenshots/icon.png)
+
 # Leader - A Simple Lead Management System
 
 Leader is a lightweight and efficient lead management system designed to help businesses track and manage potential clients. With an intuitive UI, users can add and view leads seamlessly.
-
-![Homepage](./image.png)
 
 ## 📌 Features
 
@@ -82,3 +82,47 @@ npm run dev
 ```
 
 Your app should now be running at http://localhost:3000
+
+---
+
+## Swagger UI to test the API
+
+After running the backend server, you can access Swagger UI in your browser at: http://localhost:5000/api-docs
+
+![Dashboard](./screenshots/swagger.png)
+
+### How to Use Swagger UI
+
+Open your browser and navigate to http://localhost:5000/api-docs.
+You'll see a user-friendly interface listing all available API endpoints.
+Click on an endpoint to expand its details.
+Fill in the required parameters (if any) and click **Try it out**.
+Click **Execute** to send the request and see the response.
+The response will be displayed below, showing the status code, response body, and headers.
+
+#### Example API Endpoints
+
+Method Endpoint Description
+
+- GET /leads Fetch all leads
+- POST /leads Create a new lead
+
+#### Adding More API Endpoints
+
+If you want to add more API endpoints to Swagger UI, check **leadsRoutes.js** file.
+
+---
+
+## How to Use the App
+
+### 1️ **Dashboard Overview**
+
+View existing leads and statuses.
+
+![Dashboard](./screenshots/dashboard.png)
+
+### 2️ **Adding a New Lead**
+
+Click "Add Lead," fill in the form, and submit.
+
+![Add Lead](./screenshots/add_lead.png)
