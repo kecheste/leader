@@ -20,7 +20,7 @@ export default function LeadCard({ lead }: LeadCardProps) {
     <div className="bg-white text-black p-2 md:p-4 lg:p-6 rounded-lg shadow-lg">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
-          <div className="w-8 md:w-14 h-8 md:w-14 bg-gray-300 rounded-full flex items-center justify-center">
+          <div className="w-8 h-8 md:w-14 md:h-14 bg-gray-300 rounded-full flex items-center justify-center">
             <span className="text-sm md:text-lg font-semibold text-gray-600">
               {lead.name[0]}
             </span>
