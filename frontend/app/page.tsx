@@ -34,7 +34,7 @@ export default function Home() {
           onClick={() => setShowForm(false)} // Close form when clicking outside
         >
           <div
-            className="bg-white p-6 rounded-lg shadow-lg w-full md:w-1/2"
+            className="bg-white p-6 rounded-lg shadow-lg w-full md:w-3/4 lg:w-1/2"
             onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
           >
             <LeadForm

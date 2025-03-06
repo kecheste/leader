@@ -17,17 +17,17 @@ export default function LeadCard({ lead }: LeadCardProps) {
   const currentLightColor = STATUS_LIGHT_COLORS[lead.status];
 
   return (
-    <div className="bg-white text-black p-2 md:p-6 rounded-lg shadow-lg">
+    <div className="bg-white text-black p-2 md:p-4 lg:p-6 rounded-lg shadow-lg">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
-          <div className="w-14 h-14 bg-gray-300 rounded-full flex items-center justify-center">
+          <div className="w-8 md:w-14 h-8 md:w-14 bg-gray-300 rounded-full flex items-center justify-center">
             <span className="text-sm md:text-lg font-semibold text-gray-600">
               {lead.name[0]}
             </span>
           </div>
           <div>
-            <h2 className="text-lg font-semibold">{lead.name}</h2>
-            <div className="flex items-center text-gray-400 text-sm">
+            <h2 className="text-sm md:text-lg font-semibold">{lead.name}</h2>
+            <div className="flex items-center text-gray-400 text-[8px] md:text-sm">
               <Mail className="w-4 h-4 mr-1" />
               {lead.email}
             </div>
@@ -48,7 +48,7 @@ export default function LeadCard({ lead }: LeadCardProps) {
           <div key={status} className="flex-1">
             <div
               className={cn(
-                "w-full px-3 py-1.5 rounded-md text-center text-[12px] font-bold flex items-center justify-center",
+                "w-full px-1.5 md:px-2 lg:px-3 py-1 md:py-1.5 rounded-md text-center text-[8px] md:text-[10px] lg:text-[12px] font-bold flex items-center justify-center",
                 index === currentStatusIndex
                   ? `${currentStatusColor} text-white`
                   : index < currentStatusIndex
@@ -56,7 +56,9 @@ export default function LeadCard({ lead }: LeadCardProps) {
                   : "bg-gray-200 text-gray-600"
               )}
             >
-              {index < currentStatusIndex && <Check className="w-4 h-4 mr-1" />}
+              {index < currentStatusIndex && (
+                <Check className="w-2 md:w-4 h-2 md:w-4 mr-1" />
+              )}
               {status}
             </div>
           </div>

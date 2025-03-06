@@ -2,7 +2,7 @@ import { FaUser, FaChartBar, FaCog } from "react-icons/fa";
 
 const Sidebar = () => {
   return (
-    <aside className="w-64 bg-white shadow-md p-5 flex flex-col space-y-6 hidden md:block">
+    <aside className="md:w-35 lg:w-64 bg-white shadow-md p-5 flex flex-col space-y-6 hidden md:block">
       <h2 className="text-xl font-bold text-orange-600">Leader</h2>
 
       <nav className="flex flex-col space-y-4">
